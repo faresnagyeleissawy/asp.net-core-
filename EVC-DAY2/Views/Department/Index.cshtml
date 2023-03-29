@@ -1,0 +1,22 @@
+﻿@model List<Department>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Departments</h1>
+<table class="table table-hover table-bordered">
+    <tr>
+      
+        <th>Name</th>
+        <th>Manager</th>
+    </tr>
+    @foreach (Department item in Model)
+    {
+        <tr>
+@*            <td><a href="http://localhost:13403/Product/Details?Id=@item.Id">@item.Id</a></td>
+*@            <td>@item.Name</td>
+            <td>@item.Mananger</td>
+        </tr>
+    }
+</table>
+
